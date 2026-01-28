@@ -1,6 +1,7 @@
 "use client";
 
 import { loginAction } from "@/app/actions";
+import LogoutButton from "@/app/components/logout button/LogoutButton";
 
 export default function LoginForm(){
     async function handleSubmit(formData: FormData){
@@ -18,11 +19,13 @@ export default function LoginForm(){
         }
     }
 
+
     return(
         <form action={handleSubmit}>
             <input name="username"/>
             <input name="password" type="password"/>
             <button type="submit"> Login</button>
+            <LogoutButton/>
         </form>
     )
 }
