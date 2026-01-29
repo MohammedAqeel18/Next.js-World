@@ -1,31 +1,14 @@
-"use client";
+import LoginForm from "./LoginForm";
 
-import { loginAction } from "@/app/actions";
-import LogoutButton from "@/app/components/logout button/LogoutButton";
-
-export default function LoginForm(){
-    async function handleSubmit(formData: FormData){
-
-        const username = formData.get("username") as string;
-        const password = formData.get("password")as string;
-
-        const success = await loginAction(username,password);
-
-        if(success){
-            window.location.href="/dashboard";
-
-        }else{
-            alert("Invalid  credintials")
-        }
-    }
+export default function LoginPage(){
 
 
     return(
-        <form action={handleSubmit}>
-            <input name="username"/>
-            <input name="password" type="password"/>
-            <button type="submit"> Login</button>
-            <LogoutButton/>
-        </form>
+        <div className="min-h-screen flex items-center justify-center">
+            <div className="w-full max-w-md bg-white p-6 rounded-xl shadow">
+            <h2 className="text 2xl font-semibold mb-4 text-center"> Login</h2>
+            <LoginForm/>
+            </div>
+        </div>
     )
 }

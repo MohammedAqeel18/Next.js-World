@@ -8,5 +8,5 @@ export default function LogoutButton(){
         window.location.href="/login";
     }
 
-    return <button onClick={logOut}> Logout </button>
+    return <button onClick={logOut} className="w-full bg-blue-600 text-white p-2 rounded"> Logout </button>
 }

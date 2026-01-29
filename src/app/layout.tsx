@@ -1,4 +1,6 @@
 
+import "./globals.css";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -7,7 +9,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-       
+        className="bg-gray-100 text-gray-900"
       >
         <header> Next.js World</header>
         {children}
