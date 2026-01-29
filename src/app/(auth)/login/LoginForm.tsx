@@ -33,7 +33,7 @@ export default function LoginForm(){
             className="w-full border p-2 rouned"
             placeholder="password"
             />
-            <button className="w-full bg-blue-600 text-white p-2 rounded" > Login</button>
+            <button className="w-full bg-blue-600 text-white p-2 rounded" type="submit" > Login</button>
             <LogoutButton/> 
         </form>
     )
